@@ -1,38 +1,175 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #201925;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    color: #fff;
+    background-color: rgba(32, 25, 37, 0.2);
+    z-index: 100;
+    backdrop-filter: blur(10px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header .logo {
+    max-width: 162px;
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header .logo img {
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.header ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 34px;
+    font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header ul li {
+    font-size: clamp(14px, 0.83vw, 16px);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.main_visual {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+}
+
+.main_visual .txtContainer {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    padding: 0 6.25vw;
+    color: #fff;
+    z-index: 99;
+}
+
+.main_visual div h1 {
+    font-size: clamp(38px, 3.65vw, 70px);
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0 0 20px 0;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main_visual div h1 span {
+    color: #9C2CFF;
+}
+
+.main_visual div p {
+    font-size: clamp(16px, 1.25vw, 24px);
+    line-height: 1.5;
+    color: #B7B1BC;
+}
+
+.main_visual .imgContainer .imgBox {
+    position: absolute;
+    width: 100%;
+}
+
+.main_visual .imgContainer .imgBox01 {
+    max-width: 1037px;
+    top: -10%;
+    right: 10%;
+    animation: upDown 6s ease-in-out infinite;
+}
+
+.main_visual .imgContainer .imgBox02 {
+    max-width: 266px;
+    top: 50%;
+    right: 0;
+    animation: upDown 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.main_visual .imgContainer .imgBox img {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 60px;
+}
+
+footer .infoBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+footer .infoBox p {
+    font-size: clamp(14px, 0.83vw, 16px);
+    line-height: 1.5;
+    color: #D9D9D9;
+}
+
+footer .infoBox p span {
+    font-weight: 600;
+    color: #fff;
+    padding: 0 10px 0 0;
+}
+
+footer .copyrightBox p {
+    font-size: 14px;
+    color: #7B7B7B;
+}
+
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 15px 10px 15px;
+        text-align: center;
+    }
+
+    .header ul {
+        display: none;
+        gap: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 15px 40px 15px;
+    }
+
+    footer .infoBox {
+        gap: 5px;
+    }
 }

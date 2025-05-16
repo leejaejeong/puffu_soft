@@ -1,0 +1,133 @@
+.container {
+    background: url('/src/images/sec_values_back01.png'), url('/src/images/sec_values_back02.png');
+    background-size: auto;
+    background-position: top left, center right;
+    background-repeat: no-repeat, no-repeat;
+    padding: 200px 0;
+    box-sizing: border-box;
+}
+
+.titBox {
+    max-width: 1393px;
+    padding: 0 0 120px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titBox .imgBox {
+    max-width: 163px;
+    margin: 0 auto;
+}
+
+.titBox .imgBox img {
+    width: 100%;
+}
+
+.titBox h5 {
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+    font-size: clamp(12px, 0.83vw, 16px);
+    font-weight: 600;
+    color: #9C2CFF;
+}
+
+.titBox h3 {
+    padding: 0 0 30px 0;
+    box-sizing: border-box;
+    font-size: clamp(22px, 2.08vw, 40px);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.titBox p {
+    font-size: clamp(16px, 1.04vw, 20px);
+    line-height: 1.5;
+    word-break: keep-all;
+    color: #B7B1BC;
+}
+
+.cardBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1393px;
+    margin: 0 auto;
+    /* opacity: 0; */
+}
+
+.cardBox .card {
+    width: 33.3%;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    text-align: center;
+
+    background-image: linear-gradient(#201925, #201925),
+        linear-gradient(-30deg, #3008A3 0%, #9C2CFF 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.cardBox .card>div {
+    padding: 83px 0;
+    box-sizing: border-box;
+}
+
+.cardBox .card h4 {
+    font-size: clamp(20px, 1.46vw, 28px);
+    font-weight: 600;
+}
+
+.cardBox .card .line {
+    width: 50px;
+    height: 3px;
+    background-color: #9C2CFF;
+    margin: 30px auto;
+
+}
+
+.cardBox .card p {
+    font-size: clamp(16px, 1.04vw, 20px);
+    line-height: 1.5;
+    word-break: keep-all;
+    color: #B7B1BC;
+}
+
+@media(max-width:768px) {
+    .container {
+        padding: 400px 0 150px 0;
+    }
+
+    .titBox {
+        padding: 0 15px 35px 15px;
+    }
+
+    .titBox .imgBox {
+        max-width: 100px;
+        margin: 0 auto;
+    }
+
+    .titBox h5 {
+        padding: 0 0 10px 0;
+    }
+
+    .titBox h3 {
+        padding: 0 0 20px 0;
+    }
+
+    .cardBox {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .cardBox .card {
+        width: 100%;
+    }
+
+    .cardBox .card>div {
+    padding: 60px 0;
+}
+}

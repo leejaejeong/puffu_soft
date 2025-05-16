@@ -1,0 +1,159 @@
+.container {
+    max-width: 1393px;
+    margin: 0 auto;
+    padding: 200px 0;
+    box-sizing: border-box;
+}
+
+.titBox {
+    max-width: 1393px;
+    padding: 0 0 120px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titBox h5 {
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+    font-size: clamp(12px, 0.83vw, 16px);
+    font-weight: 600;
+    color: #9C2CFF;
+}
+
+.titBox h3 {
+    padding: 0 0 30px 0;
+    box-sizing: border-box;
+    font-size: clamp(22px, 2.08vw, 40px);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.titBox p {
+    font-size: clamp(16px, 1.04vw, 20px);
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.projectBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.projectBox .project {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+
+.projectBox>.project:hover {
+    transform: translateY(-10px);
+}
+
+.projectBox .project01.app{
+    cursor: default;
+}
+
+.projectBox .project02 {
+    margin: 83px 0 0 0;
+}
+
+.projectBox .imgBox {
+    max-width: 598px;
+}
+
+.projectBox .imgBox img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3)
+}
+
+.projectBox .bgOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 98;
+    transition: all 0.7s ease;
+}
+
+.projectBox>.project:hover>.bgOverlay {
+    opacity: 0;
+}
+
+.projectBox .arrowBox {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    max-width: 35px;
+    transition: all 0.7s ease;
+}
+
+.projectBox>.project:hover>.arrowBox {
+    transform: translate(10px, -10px);
+}
+
+.projectBox .arrowBox img {
+    width: 100%;
+    transform: rotate(135deg);
+}
+
+.projectBox .txtBox {
+    position: absolute;
+    bottom: 4%;
+    left: 4%;
+    z-index: 99;
+}
+
+.projectBox .txtBox h4 {
+    font-size: clamp(18px, 1.15vw, 22px);
+    font-weight: 600;
+    padding: 0 0 10px 0;
+}
+
+.projectBox .txtBox p {
+    font-size: clamp(16px, 0.94vw, 18px);
+    line-height: 1.4;
+    font-weight: 300;
+    word-break: keep-all;
+    color: #B7B1BC;
+}
+
+@media(max-width:768px) {
+    .container {
+        padding: 0px 15px;
+    }
+
+    .titBox {
+        padding: 0 0 50px 0;
+    }
+
+    .projectBox {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .projectBox02 {
+        padding: 30px 0 0 0;
+    }
+
+    .projectBox .project02 {
+        margin: 0;
+    }
+
+    .projectBox .arrowBox {
+        top: 5%;
+        right: 5%;
+        max-width: 26px;
+    }
+
+    .projectBox .txtBox {
+        bottom: 5%;
+        left: 5%;
+    }
+}
