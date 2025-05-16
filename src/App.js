@@ -40,6 +40,24 @@ function App() {
         })
     }
 
+    useEffect(() => {
+        function setvhSize() {
+            const height = window.visualViewport?.height || window.innerHeight;
+            const vh = height * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        setvhSize();
+
+        window.addEventListener('resize', setvhSize);
+        window.visualViewport?.addEventListener('resize', setvhSize);
+
+        return () => {
+            window.removeEventListener('resize', setvhSize);
+            window.visualViewport?.removeEventListener('resize', setvhSize);
+        };
+    }, []);
+
     return (
         <div className="wrap">
             <header className="header">
